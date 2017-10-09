@@ -9,15 +9,14 @@ namespace Strings
             Console.WriteLine("Enter in a word you would like to be reversed!");
             Reverse(Console.ReadLine());
             Console.Read();
-
         }
 
         static void Reverse(string word)
         {
             string reversed = "";
-            for (int i = 0; i < word.Length; i--)
+            for (int i = word.Length - 1; i >= 0; i--)
             {
-                reversed += [i];
+                reversed += word[i];
             }
 
             Console.WriteLine(reversed);
